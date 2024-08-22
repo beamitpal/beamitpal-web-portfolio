@@ -23,7 +23,7 @@ import {
 
 import { Separator } from "../ui/separator";
 import { toast } from "sonner";
-import env from "../../../env";
+
 
 const formSchema = z.object({
   name: z.string().nonempty(),
@@ -41,7 +41,7 @@ function ContactComponent() {
       name: "",
       email: "",
       message: "",
-      access_key: env.VITE_APP_W3FORM_API_KEY,
+      access_key: process.env.VITE_APP_W3FORM_API_KEY,
     },
   });
 
