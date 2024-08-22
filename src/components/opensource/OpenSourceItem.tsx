@@ -1,4 +1,4 @@
-import BlurFade from "../ui/BlurFade";
+
 import {
   Card,
   CardContent,
@@ -27,7 +27,6 @@ function OpenSourceItem(props: OpenSourceItemProps) {
   const { techstack = [], links = [] } = props;
 
   return (
-    <BlurFade delay={0.25 * 0.05} inView>
       <Card className="m-2">
         <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between">
           <div className="flex items-start sm:items-center mb-2 sm:mb-0">
@@ -70,7 +69,6 @@ function OpenSourceItem(props: OpenSourceItemProps) {
           })}
         </CardFooter>
       </Card>
-    </BlurFade>
   );
 }
 

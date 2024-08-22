@@ -7,7 +7,7 @@ import {
 } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
-import BlurFade from "../ui/BlurFade";
+
 
 interface ExperienceItemProps {
   id: number;
@@ -22,7 +22,7 @@ interface ExperienceItemProps {
 
 function ExperienceItem(props: ExperienceItemProps) {
   return (
-    <BlurFade delay={0.25 * 0.05} inView>
+
       <Card className="m-2">
         <CardHeader className="flex flex-col sm:flex-row items-center justify-between">
           <div className="flex items-center mb-2 sm:mb-0">
@@ -54,7 +54,6 @@ function ExperienceItem(props: ExperienceItemProps) {
           </div>
         </CardFooter>
       </Card>
-    </BlurFade>
   );
 }
 

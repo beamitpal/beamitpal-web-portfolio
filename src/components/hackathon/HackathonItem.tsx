@@ -9,7 +9,7 @@ import {
 } from "../ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
 import { Badge } from "../ui/badge";
-import BlurFade from "../ui/BlurFade";
+
 
 import * as Icons from "react-icons/fa"; 
 import { Button } from "../ui/button";
@@ -30,7 +30,7 @@ function HackathonItem(props: HackathonItemProps) {
   const { techstack = [], links = [] } = props;
 
   return (
-    <BlurFade delay={0.25 * 0.05} inView>
+
       <Card className="m-2">
         <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between">
           <div className="flex items-start sm:items-center mb-2 sm:mb-0">
@@ -79,7 +79,6 @@ function HackathonItem(props: HackathonItemProps) {
           </div>
         </CardFooter>
       </Card>
-    </BlurFade>
   );
 }
 

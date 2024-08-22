@@ -1,4 +1,4 @@
-import BlurFade from "@/components/ui/BlurFade";
+
 import Typewriter from "../typewriter/TypeWriter";
 
 interface HeroProps {
@@ -14,7 +14,7 @@ function HeroCard({ name, role, image, about }: HeroProps) {
       <div className="relative z-10 flex justify-center items-center min-h-screen ">
         <section className="flex flex-col md:flex-row items-center justify-between p-8 md:p-16 space-y-12 md:space-y-0 md:space-x-16">
           <div className="w-full md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
-            <BlurFade delay={0.25 * 0.05} inView>
+          
               <div>
                 <img
                   src={image}
@@ -24,10 +24,10 @@ function HeroCard({ name, role, image, about }: HeroProps) {
                   width={400}
                 />
               </div>
-            </BlurFade>
+            
           </div>
           <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-            <BlurFade delay={0.25} inView>
+           
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl mb-4">
                 Hi, I am {name} 👋
               </h2>
@@ -35,7 +35,7 @@ function HeroCard({ name, role, image, about }: HeroProps) {
               <Typewriter text={role} delay={100} infinite={true} />
               </h3>
               <p className="leading-7 [&:not(:first-child)]:mt-6">{about}</p>
-            </BlurFade>
+           
           </div>
         </section>
       </div>

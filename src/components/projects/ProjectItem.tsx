@@ -1,4 +1,4 @@
-import BlurFade from "../ui/BlurFade";
+
 import {
   Card,
   CardContent,
@@ -26,7 +26,7 @@ function ProjectItem(props: ProjectItemProps) {
   const { techstack = [], links = [] } = props;
 
   return (
-    <BlurFade delay={0.25 * 0.05} inView>
+    
       <Card className="m-2 flex flex-col">
         <div className="w-full">
           <img
@@ -76,7 +76,6 @@ function ProjectItem(props: ProjectItemProps) {
           </CardFooter>
         </div>
       </Card>
-    </BlurFade>
   );
 }
 

@@ -20,7 +20,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import BlurFade from "../ui/BlurFade";
+
 import { Separator } from "../ui/separator";
 import { toast } from "sonner";
 import env from "../../../env";
@@ -69,7 +69,7 @@ function ContactComponent() {
   }
 
   return (
-    <BlurFade delay={0.25 * 0.05} inView>
+
       <Card className="w-full max-w-md mx-auto mt-8 p-4 md:p-6 lg:p-10">
         <CardHeader className="text-center mb-4">
           <CardTitle className="text-2xl font-semibold">
@@ -144,7 +144,7 @@ function ContactComponent() {
           </Form>
         </CardContent>
       </Card>
-    </BlurFade>
+
   );
 }
 
