@@ -41,7 +41,7 @@ function ContactComponent() {
       name: "",
       email: "",
       message: "",
-      access_key: process.env.VITE_APP_W3FORM_API_KEY,
+      access_key: import.meta.env.VITE_APP_W3FORM_API_KEY,
     },
   });
 
