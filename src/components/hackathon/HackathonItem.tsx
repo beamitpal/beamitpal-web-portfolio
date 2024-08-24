@@ -1,4 +1,3 @@
-
 import {
   Card,
   CardHeader,
@@ -10,9 +9,9 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
 import { Badge } from "../ui/badge";
 
-
-import * as Icons from "react-icons/fa"; 
+import * as Icons from "react-icons/fa";
 import { Button } from "../ui/button";
+import BlurFade from "../ui/blurfade";
 
 interface HackathonItemProps {
   id: number;
@@ -30,7 +29,7 @@ function HackathonItem(props: HackathonItemProps) {
   const { techstack = [], links = [] } = props;
 
   return (
-
+    <BlurFade duration={1} amount={0.5}>
       <Card className="m-2">
         <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between">
           <div className="flex items-start sm:items-center mb-2 sm:mb-0">
@@ -53,7 +52,11 @@ function HackathonItem(props: HackathonItemProps) {
           <p className="leading-7 mt-4">{props.about}</p>
           <div className="flex flex-wrap mt-4">
             {techstack.map((tech, index) => (
-              <Badge key={index} variant="secondary" className="mr-2 mb-2 px-2 py-1 rounded-md">
+              <Badge
+                key={index}
+                variant="secondary"
+                className="mr-2 mb-2 px-2 py-1 rounded-md"
+              >
                 {tech}
               </Badge>
             ))}
@@ -62,23 +65,22 @@ function HackathonItem(props: HackathonItemProps) {
         <CardFooter>
           <div className="flex flex-wrap">
             {links.map((link, index) => {
-              const Icon = Icons[link.icon as keyof typeof Icons] || Icons.FaExternalLinkAlt;
+              const Icon =
+                Icons[link.icon as keyof typeof Icons] ||
+                Icons.FaExternalLinkAlt;
               return (
-                <a
-                  key={index}
-                  href={link.url}
-                  className="m-0.5"
-                >
-                   <Button className="flex items-center">
+                <a key={index} href={link.url} className="m-0.5">
+                  <Button className="flex items-center">
                     <Icon className="mr-1" />
                     <span>{link.name}</span>
-                   </Button>
+                  </Button>
                 </a>
               );
             })}
           </div>
         </CardFooter>
       </Card>
+    </BlurFade>
   );
 }
 

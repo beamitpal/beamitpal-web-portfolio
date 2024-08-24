@@ -10,6 +10,7 @@ import { Badge } from "../ui/badge";
 
 import * as Icons from "react-icons/fa";
 import { Button } from "../ui/button";
+import BlurFade from "../ui/blurfade";
 
 interface ProjectItemProps {
   id: number;
@@ -26,7 +27,7 @@ function ProjectItem(props: ProjectItemProps) {
   const { techstack = [], links = [] } = props;
 
   return (
-    
+    <BlurFade duration={1} amount={0.5}>
       <Card className="m-2 flex flex-col">
         <div className="w-full">
           <img
@@ -76,6 +77,7 @@ function ProjectItem(props: ProjectItemProps) {
           </CardFooter>
         </div>
       </Card>
+      </BlurFade>
   );
 }
 

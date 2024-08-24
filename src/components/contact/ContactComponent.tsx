@@ -23,6 +23,7 @@ import {
 
 import { Separator } from "../ui/separator";
 import { toast } from "sonner";
+import BlurFade from "../ui/blurfade";
 
 
 const formSchema = z.object({
@@ -69,7 +70,7 @@ function ContactComponent() {
   }
 
   return (
-
+    <BlurFade duration={1} amount={0.5}>
       <Card className="w-full max-w-md mx-auto mt-8 p-4 md:p-6 lg:p-10">
         <CardHeader className="text-center mb-4">
           <CardTitle className="text-2xl font-semibold">
@@ -144,7 +145,7 @@ function ContactComponent() {
           </Form>
         </CardContent>
       </Card>
-
+ </BlurFade>
   );
 }
 

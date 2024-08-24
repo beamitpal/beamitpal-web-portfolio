@@ -1,7 +1,9 @@
+import BlurFade from "../ui/blurfade";
 import { Separator } from "../ui/separator";
 
 function Footer() {
   return (
+    <BlurFade duration={1} amount={0.5}>
     <footer>
       <Separator className="w-full" />
       <div className="mt-1  pt-6 sm:flex sm:items-center sm:justify-between">
@@ -83,6 +85,7 @@ function Footer() {
         </ul>
       </div>
     </footer>
+    </BlurFade>
   );
 }
 

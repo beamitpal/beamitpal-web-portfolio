@@ -1,3 +1,4 @@
+import BlurFade from "../ui/blurfade";
 import {
   Card,
   CardContent,
@@ -18,6 +19,7 @@ function SkillItem(props: SkillItemProps) {
   const Icon = Icons[props.icon as keyof typeof Icons] || Icons.FaStar;
 
   return (
+    <BlurFade duration={1} amount={0.5}>
     <Card className="m-2">
       <CardHeader className="flex items-center">
         <Icon className=" mr-3 w-6 h-6" />
@@ -31,6 +33,7 @@ function SkillItem(props: SkillItemProps) {
         </CardDescription>
       </CardContent>
     </Card>
+    </BlurFade>
   );
 }
 
