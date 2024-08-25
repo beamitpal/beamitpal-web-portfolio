@@ -29,7 +29,11 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, delay, infinite = false }
     };
   }, [currentIndex, delay, infinite, text]);
 
-  return <span>{currentText}</span>;
+  return (
+    <span className=' inline-block min-h-[1rem]'>
+      {currentText}
+    </span>
+  );
 };
 
 export default Typewriter;
