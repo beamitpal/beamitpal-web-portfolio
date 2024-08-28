@@ -4,9 +4,9 @@ import { Separator } from "../ui/separator";
 function Footer() {
   return (
     <BlurFade duration={1} amount={0.5}>
-    <footer>
+    <footer className="bg-background">
       <Separator className="w-full" />
-      <div className="mt-1  pt-6 sm:flex sm:items-center sm:justify-between">
+      <div className="m-2 mb-4 pt-6 sm:flex sm:items-center sm:justify-between ">
         <p className="text-center text-sm  sm:text-left">
           Made with ❤️ by &nbsp;
           <a
